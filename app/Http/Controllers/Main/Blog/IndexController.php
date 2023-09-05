@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Blog;
+namespace App\Http\Controllers\Main\Blog;
 
 use App\Http\Controllers\Controller;
 
@@ -8,6 +8,6 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        return view('blog.index');
+        return view('main.blog.index');
     }
 }
