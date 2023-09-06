@@ -4,6 +4,7 @@
     <div class="row">
         <h1>Posts</h1>
     </div>
+    <a href="" class="btn btn-primary">Add new post</a>
     <div class="row">
         <div class="table-responsive small">
             <table class="table table-striped table-sm">
