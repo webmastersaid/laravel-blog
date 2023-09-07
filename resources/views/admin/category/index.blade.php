@@ -1,4 +1,4 @@
-@extends('admin.layouts.admin')
+@extends('admin.layouts.main')
 @section('content')
     <div class="container scroll-y">
         <div class="row py-4">

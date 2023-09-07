@@ -100,7 +100,7 @@
               <path d="M21 21l-5.2-5.2"></path>
             </svg>
           </a>
-          <a class="btn btn-sm btn-outline-secondary" href="{{ route('admin.index') }}">Admin</a>
+          <a class="btn btn-sm btn-outline-secondary" href="{{ route('admin.dashboard.index') }}">Admin</a>
         </div>
       </div>
     </header>

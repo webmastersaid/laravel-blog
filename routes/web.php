@@ -1,10 +1,5 @@
 <?php
 
-use App\Http\Controllers\Admin\Category\CreateController;
-use App\Http\Controllers\Admin\Category\DestroyController;
-use App\Http\Controllers\Admin\Category\ShowController;
-use App\Http\Controllers\Admin\Category\StoreController;
-use App\Http\Controllers\Admin\Category\UpdateController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -28,11 +23,11 @@ Route::name('main.')->namespace('App\Http\Controllers\Main')->group(function () 
     });
 });
 
-Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->group(function () {
-    Route::namespace('Blog')->group(function () {
-        Route::get('/', IndexController::class)->name('admin.index');
+Route::prefix('admin')->name('admin.')->namespace('App\Http\Controllers\Admin')->group(function () {
+    Route::name('dashboard.')->namespace('Dashboard')->group(function () {
+        Route::get('/', IndexController::class)->name('index');
     });
-    Route::prefix('categories')->name('admin.category.')->namespace('Category')->group(function () {
+    Route::prefix('categories')->name('category.')->namespace('Category')->group(function () {
         Route::get('/', IndexController::class)->name('index');
         Route::get('/create', CreateController::class)->name('create');
         Route::post('/', StoreController::class)->name('store');
@@ -40,6 +35,15 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->group(function 
         Route::get('/{category}/edit', EditController::class)->name('edit');
         Route::patch('/{category}', UpdateController::class)->name('update');
         Route::delete('{category}', DestroyController::class)->name('destroy');
+    });
+    Route::prefix('tags')->name('tag.')->namespace('Tag')->group(function () {
+        Route::get('/', IndexController::class)->name('index');
+        Route::get('/create', CreateController::class)->name('create');
+        Route::post('/', StoreController::class)->name('store');
+        Route::get('/{tag}', ShowController::class)->name('show');
+        Route::get('/{tag}/edit', EditController::class)->name('edit');
+        Route::patch('/{tag}', UpdateController::class)->name('update');
+        Route::delete('{tag}', DestroyController::class)->name('destroy');
     });
 });
 

@@ -1,4 +1,4 @@
-@extends('admin.layouts.admin')
+@extends('admin.layouts.main')
 @section('content')
     <div class="container">
         <div class="d-flex align-items-center py-4">

@@ -1,8 +1,8 @@
-@extends('admin.layouts.admin')
+@extends('admin.layouts.main')
 @section('content')
 <div class="container scroll-y">
     <div class="row">
-        <h1>Posts</h1>
+        <h1>Dashboard</h1>
     </div>
     <a href="" class="btn btn-primary">Add new post</a>
     <div class="row">

@@ -1,14 +1,13 @@
-@extends('admin.layouts.admin')
+@extends('admin.layouts.main')
 @section('content')
     <div class="container scroll-y">
         <div class="row">
             <h1>Categories</h1>
         </div>
         <div class="row">
-            <form action="{{ route('admin.category.update', $category->id) }}" method="post">
+            <form action="{{ route('admin.category.store') }}" method="post">
                 @csrf
-                @method('patch')
-                <input type="text" name="title" placeholder="Title" value="{{ $category->title }}" required><br>
+                <input type="text" name="title" placeholder="Title" required><br>
                 <br>
                 @error('title')
                     <div class="text-danger">{{ $message }}</div>
