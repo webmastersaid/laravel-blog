@@ -23,6 +23,9 @@ class UpdateRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
+            'title' => 'required|string',
+            'preview_image' => 'file',
+            'detail_image' => 'file',
         ];
     }
 }

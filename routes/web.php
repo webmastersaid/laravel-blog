@@ -49,10 +49,10 @@ Route::prefix('admin')->name('admin.')->namespace('App\Http\Controllers\Admin')-
         Route::get('/', IndexController::class)->name('index');
         Route::get('/create', CreateController::class)->name('create');
         Route::post('/', StoreController::class)->name('store');
-        Route::get('/{tag}', ShowController::class)->name('show');
-        Route::get('/{tag}/edit', EditController::class)->name('edit');
-        Route::patch('/{tag}', UpdateController::class)->name('update');
-        Route::delete('{tag}', DestroyController::class)->name('destroy');
+        Route::get('/{post}', ShowController::class)->name('show');
+        Route::get('/{post}/edit', EditController::class)->name('edit');
+        Route::patch('/{post}', UpdateController::class)->name('update');
+        Route::delete('{post}', DestroyController::class)->name('destroy');
     });
 });
 
