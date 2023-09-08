@@ -78,7 +78,7 @@
                             </td>
                             <td>{{ $post->title }}</td>
                             <td>{{ $post->content }}</td>
-                            <td><img src="{{ Storage::url($post->preview_image) }}" alt="{{ $post->title }}"></td>
+                            <td><img src="{{ $post->preview_image }}" alt="{{ $post->title }}"></td>
                             <td><img src="{{ $post->detail_image }}" alt="{{ $post->title }}"></td>
                             <td>{{ $post->created_at }}</td>
                             <td>{{ $post->updated_at }}</td>
