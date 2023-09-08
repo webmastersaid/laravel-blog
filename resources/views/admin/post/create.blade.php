@@ -44,14 +44,15 @@
                 </div>
                 <div class="mb-3">
                     <label for="tagMultipleSelect" class="form-label">Select category</label>
-                <select id="tagMultipleSelect" class="form-select" name="tag_ids[]" multiple aria-label="Multiple select tags">
-                    @foreach ($tags as $tag)
+                    <select id="tagMultipleSelect" class="form-select" name="tag_ids[]" multiple
+                        aria-label="Multiple select tags">
+                        @foreach ($tags as $tag)
                             <option value="{{ $tag->id }}"
                                 {{ is_array(old('tag_ids')) && in_array($tag->id, old('tag_ids')) ? ' selected' : '' }}>
                                 {{ $tag->title }}
                             </option>
                         @endforeach
-                  </select>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Save</button>
