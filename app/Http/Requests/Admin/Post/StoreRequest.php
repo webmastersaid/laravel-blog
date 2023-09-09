@@ -24,9 +24,9 @@ class StoreRequest extends FormRequest
         return [
             'title' => 'required|string',
             'content' => 'required|string',
-            'preview_image' => 'file',
-            'detail_image' => 'file',
-            'category_id' => 'integer|exists:categories,id',
+            'preview_image' => 'nullable|file',
+            'detail_image' => 'nullable|file',
+            'category_id' => 'nullable|integer|exists:categories,id',
             'tag_ids' => 'nullable|array',
             'tags_ids.*' => 'nullable|integer|exists:post_tags,id'
         ];
