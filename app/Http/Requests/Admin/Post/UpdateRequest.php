@@ -31,4 +31,16 @@ class UpdateRequest extends FormRequest
             'tags_ids.*' => 'nullable|integer|exists:post_tags,id'
         ];
     }
+    public function messages()
+    {
+        return [
+            'title.string' => 'String type',
+            'content.string' => 'String type',
+            'preview_image.file' => 'File type',
+            'detail_image.file' => 'File type',
+            'category_id.integer' => 'Integer type',
+            'tag_ids.array' => 'Array type',
+            'tags_ids.*.integer' => 'Integer type'
+        ];
+    }
 }
