@@ -23,7 +23,7 @@ Route::name('main.')->namespace('App\Http\Controllers\Main')->group(function () 
     });
 });
 
-Route::prefix('admin')->name('admin.')->namespace('App\Http\Controllers\Admin')->group(function () {
+Route::prefix('admin')->name('admin.')->namespace('App\Http\Controllers\Admin')->middleware('admin')->group(function () {
     Route::name('dashboard.')->namespace('Dashboard')->group(function () {
         Route::get('/', IndexController::class)->name('index');
     });
