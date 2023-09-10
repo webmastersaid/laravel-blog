@@ -54,5 +54,9 @@
                 Tags
             </a>
         </li>
+        <form action="{{route('logout')}}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-danger m-1">Logout</button>
+        </form>
     </ul>
 </div>

@@ -14,16 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::name('main.')->namespace('App\Http\Controllers\Main')->group(function () {
-    Route::namespace('Home')->group(function(){
+    Route::namespace('Home')->group(function () {
         Route::get('/', IndexController::class)->name('home.index');
     });
-    Route::prefix('blog')->namespace('Blog')->group(function(){
+    Route::prefix('blog')->namespace('Blog')->group(function () {
         Route::get('/', IndexController::class)->name('blog.index');
     });
 });
 
-Route::prefix('admin')->name('admin.')->namespace('App\Http\Controllers\Admin')->middleware('admin')->group(function () {
+Route::prefix('admin')->name('admin.')->namespace('App\Http\Controllers\Admin')->middleware(['auth', 'admin'])->group(function () {
     Route::name('dashboard.')->namespace('Dashboard')->group(function () {
         Route::get('/', IndexController::class)->name('index');
     });
