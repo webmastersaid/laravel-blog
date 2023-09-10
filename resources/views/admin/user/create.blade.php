@@ -27,6 +27,17 @@
                 @enderror
             </div>
             <div class="mb-3">
+                    <label for="roleSelect" class="form-label">Select role</label>
+                    <select id="roleSelect" class="form-select" name="role" aria-label="Role select">
+                        @foreach ($roles as $id => $role)
+                            <option value="{{ $id }}"
+                                {{ $id == old('role') ? ' selected' : '' }}>
+                                {{ $role }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+            <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Save</button>
                 <a href="{{route('admin.user.index')}}" class="btn btn-secondary">Cancel</a>
             </div>

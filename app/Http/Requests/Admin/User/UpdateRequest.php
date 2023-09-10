@@ -23,7 +23,9 @@ class UpdateRequest extends FormRequest
     {
         return [
             'name' => 'nullable|string',
-            'email' => 'nullable|string|email|unique:users',
+            'email' => 'nullable|string|email|unique:users,email,' . $this->user_id,
+            'role' => 'nullable|integer',
+            'user_id' => 'required|integer|exists:users,id'
         ];
     }
     public function messages()
