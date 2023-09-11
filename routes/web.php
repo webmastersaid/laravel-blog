@@ -27,7 +27,7 @@ Route::name('main.')->namespace('App\Http\Controllers\Main')->group(function () 
     });
 });
 
-Route::prefix('admin')->name('admin.')->namespace('App\Http\Controllers\Admin')->middleware(['auth', 'admin'])->group(function () {
+Route::prefix('admin')->name('admin.')->namespace('App\Http\Controllers\Admin')->middleware(['auth', 'admin', 'verified'])->group(function () {
     Route::name('dashboard.')->namespace('Dashboard')->group(function () {
         Route::get('/', IndexController::class)->name('index');
     });
@@ -69,4 +69,4 @@ Route::prefix('admin')->name('admin.')->namespace('App\Http\Controllers\Admin')-
     });
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
