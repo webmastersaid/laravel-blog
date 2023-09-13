@@ -10,7 +10,7 @@
 
 <body>
     <main class="d-flex flex-nowrap">
-        @include('admin.includes.sidebar')
+        @include('personal.includes.sidebar')
         @yield('content')
         <form action="{{route('logout')}}" method="POST">
             @csrf
