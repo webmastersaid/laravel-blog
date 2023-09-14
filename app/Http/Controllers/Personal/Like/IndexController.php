@@ -8,8 +8,8 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
+        // TODO: fixme
         $posts = auth()->user()->likedPosts;
-        dd($posts);
         return view('personal.like.index', compact('posts'));
     }
 }
