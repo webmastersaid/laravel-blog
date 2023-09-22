@@ -10,6 +10,7 @@
                     <tr>
                         <th>id</th>
                         <th>name</th>
+                        <th>role</th>
                         <th>created at</th>
                         <th>updated at</th>
                         <th colspan="3" class="text-center">Action</th>
@@ -20,6 +21,7 @@
                     <tr>
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
+                        <td>{{ $user->role }}</td>
                         <td>{{ $user->created_at }}</td>
                         <td>{{ $user->updated_at }}</td>
                         <td class="text-center">
