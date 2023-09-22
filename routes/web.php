@@ -48,7 +48,7 @@ Route::namespace('App\Http\Controllers')->group(function () {
             Route::get('/{user}', ShowController::class)->name('show');
             Route::get('/{user}/edit', EditController::class)->name('edit');
             Route::patch('/{user}', UpdateController::class)->name('update');
-            Route::delete('{user}', DestroyController::class)->name('destroy');
+            Route::delete('/{user}', DestroyController::class)->name('destroy');
         });
         Route::prefix('categories')->name('category.')->namespace('Category')->group(function () {
             Route::get('/', IndexController::class)->name('index');
@@ -57,7 +57,7 @@ Route::namespace('App\Http\Controllers')->group(function () {
             Route::get('/{category}', ShowController::class)->name('show');
             Route::get('/{category}/edit', EditController::class)->name('edit');
             Route::patch('/{category}', UpdateController::class)->name('update');
-            Route::delete('{category}', DestroyController::class)->name('destroy');
+            Route::delete('/{category}', DestroyController::class)->name('destroy');
         });
         Route::prefix('tags')->name('tag.')->namespace('Tag')->group(function () {
             Route::get('/', IndexController::class)->name('index');
@@ -66,7 +66,7 @@ Route::namespace('App\Http\Controllers')->group(function () {
             Route::get('/{tag}', ShowController::class)->name('show');
             Route::get('/{tag}/edit', EditController::class)->name('edit');
             Route::patch('/{tag}', UpdateController::class)->name('update');
-            Route::delete('{tag}', DestroyController::class)->name('destroy');
+            Route::delete('/{tag}', DestroyController::class)->name('destroy');
         });
         Route::prefix('posts')->name('post.')->namespace('Post')->group(function () {
             Route::get('/', IndexController::class)->name('index');
@@ -75,7 +75,7 @@ Route::namespace('App\Http\Controllers')->group(function () {
             Route::get('/{post}', ShowController::class)->name('show');
             Route::get('/{post}/edit', EditController::class)->name('edit');
             Route::patch('/{post}', UpdateController::class)->name('update');
-            Route::delete('{post}', DestroyController::class)->name('destroy');
+            Route::delete('/{post}', DestroyController::class)->name('destroy');
         });
     });
 });
