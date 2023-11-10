@@ -32,9 +32,13 @@ Route::namespace('App\Http\Controllers')->group(function () {
         });
         Route::prefix('comments')->name('comment.')->namespace('Comment')->group(function () {
             Route::get('/', IndexController::class)->name('index');
+            Route::get('/{comment}/edit', EditController::class)->name('edit');
+            Route::patch('/{comment}', UpdateController::class)->name('update');
+            Route::delete('/{comment}', DestroyController::class)->name('destroy');
         });
         Route::prefix('likes')->name('like.')->namespace('Like')->group(function () {
             Route::get('/', IndexController::class)->name('index');
+            Route::delete('/{like}', DestroyController::class)->name('destroy');
         });
     });
     Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware(['auth', 'admin', 'verified'])->group(function () {
