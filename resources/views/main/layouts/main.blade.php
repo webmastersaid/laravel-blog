@@ -139,19 +139,10 @@
             </div>
         </header>
         <div class="nav-scroller py-1 mb-3 border-bottom">
-            <nav class="nav nav-underline justify-content-between">
-                <a class="nav-item nav-link link-body-emphasis active" href="{{ route('main.home.index') }}">Home</a>
-                <a class="nav-item nav-link link-body-emphasis" href="{{ route('main.blog.index') }}">Blog</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Technology</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Design</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Business</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Politics</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Opinion</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Science</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Health</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Style</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Travel</a>
+            <nav class="nav nav-underline justify-content-start">
+                <a class="nav-item nav-link link-body-emphasis" href="{{ route('main.home.index') }}">Home</a>
+                <a class="nav-item nav-link link-body-emphasis" href="{{ route('main.post.index') }}">Posts</a>
+                <a class="nav-item nav-link link-body-emphasis" href="{{ route('main.category.index') }}">Categories</a>
             </nav>
         </div>
     </div>
