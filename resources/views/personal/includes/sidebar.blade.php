@@ -9,7 +9,7 @@
             </svg>
             <span class="ps-1">Personal</span>
         </div>
-        <a href="{{ route('main.blog.index') }}" class="d-flex align-items-center text-decoration-none">
+        <a href="{{ route('main.post.index') }}" class="d-flex align-items-center text-decoration-none">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-newspaper" viewBox="0 0 16 16">
                 <path
